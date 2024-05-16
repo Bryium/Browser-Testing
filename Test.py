@@ -32,3 +32,13 @@ class WebpageTests(unittest.TestCase):
         decrease = driver.find_element_by_id("decrease")    
         decrease.click()
         self.assertEqual(driver.find_elemnt_by_tag_name("h1").text, "-1")
+
+
+    def test_multiple_increase(self):
+        driver.get(file_url("counter.html"))
+        increase = driver.find_element_by_id("increase")
+        for i in range(3):
+            increase.click()
+            self.assertEqual(driver.find_element_by_tag_name("h1").text, "3")
+
+        
