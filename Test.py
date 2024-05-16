@@ -12,3 +12,10 @@ def file_url(filename):
 
 
 driver = webdriver.Chrome()
+
+
+class WebpageTests(unittest.TestCase):
+    
+    def test_title(self):
+        driver.get(file_url("counter.html"))
+        self.assertEqual(driver.title, "Counter")
