@@ -25,4 +25,10 @@ class WebpageTests(unittest.TestCase):
         driver.get(file_url("counter.html"))
         increase = driver.find_element_by_id("increase")
         increase.click()
-        self.assertEqual(driver.find_element_by_tag_name("h1".text, "1"))
+        self.assertEqual(driver.find_element_by_tag_name("h1").text, "1")
+
+    def test_decrease(self):
+        driver.get(file_url("counter.html"))
+        decrease = driver.find_element_by_id("decrease")    
+        decrease.click()
+        self.assertEqual(driver.find_elemnt_by_tag_name("h1").text, "-1")
