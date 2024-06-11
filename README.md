@@ -1,2 +1,2 @@
 # Browser-Testing
-This repository contains Python code leveraging the Selenium framework for automating browser testing. Selenium allows simulating user interactions with web browsers, making it an essential tool for web application testing
+In this project, you'll find Python code that harnesses the Selenium framework to automate browser testing, facilitating the simulation of user interactions crucial for testing web applications.
